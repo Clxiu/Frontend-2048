@@ -8,8 +8,10 @@ To pass phase 3 for the front-end, you will need to have any __five__ of the fol
 
 ## Advanced Features List
 
-* UI Scalability with window size
-* Mobile first development (using media query breakpoints, etc)
+* UI Scalability with window size (done)
+-> Change all px to vw/rem
+* Mobile first development (using media query breakpoints, etc) (done)
+-> Breakpoint when screen is smaller than 1250px and 600px.
 * Storybook w/ both actions and interactions (play)
 * Progressive Web App (PWA) functionality w/ clear use of the service worker
 * API connection to your own API that is cloud hosted

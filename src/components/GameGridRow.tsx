@@ -17,14 +17,14 @@ const GameGridRow = ({width, height, tiles} : GameGridRowProps) => {
         const res = [];
 
         for(let i = 0; i < width; i++) 
-            res.push(<Grid item key={`GameGridTile${height} ${i}`} md={tileWidth} justifyContent={"space-evenly"} alignItems={"stretch"}>
+            res.push(<Grid item key={`GameGridTile${height} ${i}`} md={tileWidth} xs={tileWidth} justifyContent={"space-evenly"} alignItems={"stretch"}>
                 <Tile currentValue={tiles[i].value}/>
             </Grid>);
 
         return res;
     }
 
-    return <Grid container item spacing={2} justifyContent={"space-evenly"} alignContent={"space-evenly"} md={12}>
+    return <Grid container item spacing={2} justifyContent={"space-evenly"} alignContent={"space-evenly"}>
         {generateTiles().map(tile => tile)}
     </Grid>
 }

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { combineLeftRowVals, combineRightRowVals, copyGameState, generateTile, hasTileMoved, isGameOver, makeDownMove, makeLeftMove, makeRightMove, makeUpMove, rotateLeft, rotateRight, squashRow } from '../../services/gameLogicService';
+import { copyGameState, generateTile, hasTileMoved, isGameOver, makeDownMove, makeLeftMove, makeRightMove, makeUpMove } from '../../services/gameLogicService';
 import { RootState } from '../rootStore';
 
 export interface TileInfo {
@@ -109,7 +109,6 @@ export const gameSlice = createSlice({
         }
     }
 });
-
 
 export const { newGame, moveLeft, moveRight, moveUp, moveDown, gameOver, startGame } = gameSlice.actions;
 

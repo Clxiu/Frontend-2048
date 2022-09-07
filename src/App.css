@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+/* When the screen size if 600 pixels or less, it will apply the #eee4da background color. 
+When the screen size is greater, it will not apply the #eee4da background. */
+@media only screen and (max-width : 600px){
+  body{
+    background-color : #eee4da;
+  }
+}
+@media only screen and (max-width : 1250px) and (min-width : 600px){
+  body{
+    background-color : #eee1c9;
+  }
+}
+.tile{
+  transition-property: left, top, transform;
+  transition-duration: 250ms, 250ms, 100ms;
+  transform: scale(1);
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.enter {
+  transform: translate(100%, 0);
+  opacity: 0;
+}

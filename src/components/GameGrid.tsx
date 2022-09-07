@@ -24,7 +24,7 @@ const GameGrid = ({width, height, gameState} : GameGridProps) => {
         return res;
     }
 
-    return <Grid container spacing={2} 
+    return <Grid container spacing={2}
     justifyContent={"space-evenly"} 
     alignContent={"space-evenly"} sx={{
         backgroundColor: "#bbada0", 
