@@ -49,14 +49,19 @@ When the screen size is greater, it will not apply the #eee4da background. */
     background-color : #eee1c9;
   }
 }
-.tile{
-  transition-property: left, top, transform;
-  transition-duration: 250ms, 250ms, 100ms;
-  transform: scale(1);
-  opacity: 1;
-  transition: opacity 300ms ease-in;
+
+.tile.new{
+  animation-duration: 0.2s;
+  animation-name: newTile;
+  animation-fill-mode: forwards;
+  animation-delay: 0.15s;
+  transform: scale(0);
 }
-.enter {
-  transform: translate(100%, 0);
-  opacity: 0;
+@keyframes newTile {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }

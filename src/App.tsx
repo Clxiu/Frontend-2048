@@ -1,8 +1,8 @@
 import { Container } from '@mui/material';
-import { createTheme, styled } from '@mui/material/styles';
 import React, {useEffect, useLayoutEffect, useState} from 'react';
 import LogicGameGrid from './components/LogicGameGrid';
 import { useReducer } from 'react'
+import './App.css';
 
 function App() {
   const [matches, setMatches] = useState(

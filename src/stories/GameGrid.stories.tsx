@@ -21,9 +21,9 @@ Grid.args =  {
     height: 4,
     width: 4,
     gameState: [
-      [{ value: 0 }, { value: 0 }, { value: 0 }, { value: 0 }],
-      [{ value: 0 }, { value: 0 }, { value: 0 }, { value: 0 }],
-      [{ value: 0 }, { value: 0 }, { value: 0 }, { value: 0 }],
-      [{ value: 0 }, { value: 0 }, { value: 0 }, { value: 0 }],
+      [{ value: 0, new : false, move: 0, shift: 0 }, { value: 0, new : false, move: 0, shift: 0 }, { value: 0, new : false, move: 0, shift: 0 }, { value: 0, new : false, move: 0, shift: 0 }],
+      [{ value: 0, new : false, move: 0, shift: 0 }, { value: 0, new : false, move: 0, shift: 0 }, { value: 0, new : false, move: 0, shift: 0 }, { value: 0, new : false, move: 0, shift: 0 }],
+      [{ value: 0, new : false, move: 0, shift: 0 }, { value: 0, new : false, move: 0, shift: 0 }, { value: 0, new : false, move: 0, shift: 0 }, { value: 0, new : false, move: 0, shift: 0 }],
+      [{ value: 0, new : false, move: 0, shift: 0 }, { value: 0, new : false, move: 0, shift: 0 }, { value: 0, new : false, move: 0, shift: 0 }, { value: 0, new : false, move: 0, shift: 0 }],
     ]
 }

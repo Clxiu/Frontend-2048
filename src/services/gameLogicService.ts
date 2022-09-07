@@ -21,18 +21,18 @@ export const combineLeftRowVals = (squashedRow: TileInfo[]): TileInfo[] => {
 
   for (let i = 0; i < squashedRow.length; i++) {
     if (i + 1 === squashedRow.length) {
-      newRow.push({ value: squashedRow[i].value });
+      newRow.push({ value: squashedRow[i].value, new: false, move: 0, shift:0 });
       break;
     }
 
     //TODO: Update score value
     if (squashedRow[i].value === squashedRow[i + 1].value) {
-      newRow.push({ value: squashedRow[i].value + 1 });
+      newRow.push({ value: squashedRow[i].value + 1, new: false, move: 0, shift:0 });
       i++;
       continue;
     }
 
-    newRow.push({ value: squashedRow[i].value });
+    newRow.push({ value: squashedRow[i].value, new: false, move: 0, shift:0 });
   }
 
   return newRow;
@@ -43,17 +43,17 @@ export const combineRightRowVals = (squashedRow: TileInfo[]): TileInfo[] => {
 
   for (let i = squashedRow.length - 1; i >= 0; i--) {
     if (i - 1 < 0) {
-      newRow.unshift({ value: squashedRow[i].value });
+      newRow.unshift({ value: squashedRow[i].value, new: false, move:0, shift:0 });
       break;
     }
 
     if (squashedRow[i].value === squashedRow[i - 1].value) {
-      newRow.unshift({ value: squashedRow[i].value + 1 });
+      newRow.unshift({ value: squashedRow[i].value + 1, new: false, move:0, shift:0 });
       i--;
       continue;
     }
 
-    newRow.unshift({ value: squashedRow[i].value });
+    newRow.unshift({ value: squashedRow[i].value, new: false, move:0, shift:0 });
   }
 
   return newRow;
@@ -103,7 +103,7 @@ export const generateTile = (gameState: TileInfo[][]): TileInfo[][] => {
   });
 
   let randEmpty = emptyTiles[Math.floor(Math.random() * emptyTiles.length)];
-  newState[randEmpty.x][randEmpty.y] = { value: Math.ceil(Math.random() * 2) };
+  newState[randEmpty.x][randEmpty.y] = { value: Math.ceil(Math.random() * 2), new: true, move:0, shift:0 };
 
   return newState;
 };
@@ -130,7 +130,7 @@ export const makeLeftMove = (originalState: TileInfo[][]): TileInfo[][] => {
 
     let diff = row.length - newRow.length;
     for (let i = 0; i < diff; i++) {
-      newRow.push({ value: 0 });
+      newRow.push({ value: 0, new: false, move: 0, shift: 0 });
     }
 
     return newRow;
@@ -144,7 +144,7 @@ export const makeRightMove = (originalState: TileInfo[][]): TileInfo[][] => {
 
     let diff = row.length - newRow.length;
     for (let i = 0; i < diff; i++) {
-      newRow.unshift({ value: 0 });
+      newRow.unshift({ value: 0, new: false, move: 0, shift: 0 });
     }
 
     return newRow;
@@ -160,7 +160,7 @@ export const makeDownMove = (originalState: TileInfo[][]) : TileInfo[][] => {
 
     let diff = row.length - newRow.length;
     for (let i = 0; i < diff; i++) {
-      newRow.push({ value: 0 });
+      newRow.push({ value: 0, new: false, move: 0, shift: 0 });
     }
 
     return newRow;
@@ -178,7 +178,7 @@ export const makeUpMove = (originalState: TileInfo[][]) : TileInfo[][] => {
 
     let diff = row.length - newRow.length;
     for (let i = 0; i < diff; i++) {
-      newRow.push({ value: 0 });
+      newRow.push({ value: 0, new: false, move: 0, shift: 0 });
     }
 
     return newRow;
