@@ -1,4 +1,5 @@
 # Front-end Phase 3
+YouTube: https://youtu.be/kcu_WMc_s48
 ## Front End Requirements
 
 To pass phase 3 for the front-end, you will need to have any __five__ of the following advanced features, or any __two__ of the extra for experts features.
