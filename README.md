@@ -8,9 +8,9 @@ To pass phase 3 for the front-end, you will need to have any __five__ of the fol
 
 ## Advanced Features List
 
-* UI Scalability with window size (done)\n
+* UI Scalability with window size (done)<br>
 -> Change all px to vw/rem
-* Mobile first development (using media query breakpoints, etc) (done)\n
+* Mobile first development (using media query breakpoints, etc) (done)<br>
 -> Breakpoint when screen is smaller than 1250px and 600px.
 * Storybook w/ both actions and interactions (play)
 * Progressive Web App (PWA) functionality w/ clear use of the service worker
@@ -18,7 +18,7 @@ To pass phase 3 for the front-end, you will need to have any __five__ of the fol
 * Comprehensive unit testing (done)
 * OAuth2 with PKCE login w/ at least ONE third party provider
 * Clear usage of Websockets
-* At least one fluid animation (done)\n
+* At least one fluid animation (done)<br>
 -> When a new tile comes out. 
 * Redux state management
 * Demonstration of complex FE logic
