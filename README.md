@@ -15,11 +15,11 @@ To pass phase 3 for the front-end, you will need to have any __five__ of the fol
 * Storybook w/ both actions and interactions (play)
 * Progressive Web App (PWA) functionality w/ clear use of the service worker
 * API connection to your own API that is cloud hosted
-* Comprehensive unit testing
+* Comprehensive unit testing (done)
 * OAuth2 with PKCE login w/ at least ONE third party provider
 * Clear usage of Websockets
 * At least one fluid animation (done)\n
--> When a new title comes out. 
+-> When a new tile comes out. 
 * Redux state management
 * Demonstration of complex FE logic
 

@@ -18,7 +18,7 @@ const GameGridRow = ({width, height, tiles} : GameGridRowProps) => {
 
         for(let i = 0; i < width; i++) 
             res.push(<Grid item key={`GameGridTile${height} ${i}`} md={tileWidth} xs={tileWidth} justifyContent={"space-evenly"} alignItems={"stretch"}>
-                <Tile currentValue={tiles[i].value} animation={tiles[i].new} move = {tiles[i].move} shift = {tiles[i].shift}/>
+                <Tile currentValue={tiles[i].value} animation={tiles[i].new} />
             </Grid>);
 
         return res;

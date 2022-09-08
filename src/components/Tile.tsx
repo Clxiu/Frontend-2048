@@ -2,8 +2,6 @@
 export interface TileProps {
     currentValue: number,
     animation: boolean,
-    move: number,
-    shift: number
 }
 
 const colours = [

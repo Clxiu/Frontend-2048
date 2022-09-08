@@ -5,10 +5,6 @@ import { RootState } from '../rootStore';
 export interface TileInfo {
     value: number;
     new: boolean;
-    move: number;
-    // +: right, -: left
-    shift: number;
-    // +: up, -: down
 }
 
 export interface GameState {
@@ -21,10 +17,10 @@ export interface GameState {
 
 const initialState : GameState = {
     gameState: [
-        [{ value: 0, new : false, move: 0, shift:0 }, { value: 0, new : false, move: 0, shift:0 }, { value: 0, new : false, move: 0, shift:0 }, { value: 0, new : false, move: 0, shift:0 }],
-        [{ value: 0, new : false, move: 0, shift:0 }, { value: 0, new : false, move: 0, shift:0 }, { value: 0, new : false, move: 0, shift:0 }, { value: 0, new : false, move: 0, shift:0 }],
-        [{ value: 0, new : false, move: 0, shift:0 }, { value: 0, new : false, move: 0, shift:0 }, { value: 0, new : false, move: 0, shift:0 }, { value: 0, new : false, move: 0, shift:0 }],
-        [{ value: 0, new : false, move: 0, shift:0 }, { value: 0, new : false, move: 0, shift:0 }, { value: 0, new : false, move: 0, shift:0 }, { value: 0, new : false, move: 0, shift:0 }],
+        [{ value: 0, new : false }, { value: 0, new : false }, { value: 0, new : false }, { value: 0, new : false }],
+        [{ value: 0, new : false }, { value: 0, new : false }, { value: 0, new : false }, { value: 0, new : false }],
+        [{ value: 0, new : false}, { value: 0, new : false }, { value: 0, new : false }, { value: 0, new : false }],
+        [{ value: 0, new : false }, { value: 0, new : false }, { value: 0, new : false }, { value: 0, new : false }],
     ],
     height: 4,
     width: 4,
@@ -107,8 +103,8 @@ export const gameSlice = createSlice({
                 x2 = Math.floor(Math.random() * x1);
             }
 
-            cleanState[x1][y1] = { value: Math.ceil(Math.random() * 2), new : true, move: 0, shift: 0};
-            cleanState[x2][y2] = { value: Math.ceil(Math.random() * 2), new : true, move: 0, shift: 0};
+            cleanState[x1][y1] = { value: Math.ceil(Math.random() * 2), new : true};
+            cleanState[x2][y2] = { value: Math.ceil(Math.random() * 2), new : true};
 
             state.gameState = cleanState;
         }

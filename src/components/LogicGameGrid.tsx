@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
+import { Provider } from "react-redux";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { moveDown, moveLeft, moveRight, moveUp, gameOver, newGame, selectState, startGame, selectIsOver } from "../store/slices/gameSlice";
 import GameGrid from "./GameGrid";
